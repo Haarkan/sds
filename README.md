@@ -7,5 +7,6 @@
 
 ### Communication strategy
 Whatsapp group chat 
+https://chat.whatsapp.com/E09x2E8d0t0ATYbDDzOX0j
 
 ### Installation manual
