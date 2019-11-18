@@ -16,7 +16,7 @@
 <body class="text-center">
     <header>
         <nav class="navbar navbar-light navbar-expand-md sticky-top border-dark border rounded-0" style="padding: 0px;">
-            <div class="container-fluid"><a class="navbar-brand" href=""><img src="assets/img/EU%20flag-Erasmus+_vect_POS.png" style="width:150px;height:60px;"></a>
+            <div class="container-fluid"><a class="navbar-brand" href="/erasmus/sds/public"><img src="assets/img/EU%20flag-Erasmus+_vect_POS.png" style="width:150px;height:60px;"></a>
                 <div class="collapse navbar-collapse" style="width: 285px;"><a class="d-xl-flex ml-auto" href="#" style="color: rgb(0,0,0);">ERASMUS LEARNING AGREEMENT MANAGER</a></div>
                 <div class="collapse navbar-collapse d-xl-flex justify-content-xl-end" style="width: 0px;height: 34px;margin: 0px;padding: 0px;padding-left: 0px;margin-left: 100px;"><a href="#"><img src="assets/img/shopping-cart.png" style="width: 50px;padding-right: 0px;"></a><a href="#" style="padding-left: 20px;padding-bottom: 0px;"><img src="assets/img/images.jpg" style="width: 50px;"></a></div>
             </div>
