@@ -1,3 +1,6 @@
+- Scrum master : Bexultan Toleubayev
+- Product owner : Axel Houlès
+
 ### Reponsabilities 
 - Axel Houlès : draw mockups, manage product backlog
 - Davut Aslan and Bexultan Toleubayev : front end
