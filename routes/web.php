@@ -11,5 +11,16 @@
 |
 */
 
-Route::get('/','HomeController@index');
-Route::get('/courses','CourseController@index');
+Route::get('/', function () {
+    return view('home');
+});
+
+
+Route::get('courses','CoursesController@index');
+Route::get('/cart', 'CoursesController@cart');
+Route::get('add-to-cart/{id}', 'CoursesController@addToCart');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
