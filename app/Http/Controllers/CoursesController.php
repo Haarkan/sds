@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Courses;
-
+use Symfony\Component\Process\Process;
+use Symfony\Component\Process\Exception\ProcessFailedException;
+use Illuminate\Support\Facades\Auth;
 class CoursesController extends Controller
 {
     /**
@@ -20,10 +21,18 @@ class CoursesController extends Controller
 
     public function cart()
     {
-        return view('cart');
+        if (Auth::check()) {
+            return view('cart');
+        }
+        else{
+            return redirect()->route('login');
+        }
+
     }
     public function addToCart($id)
     {
+        if (Auth::check()) {
+        
         $product = Courses::find($id);
  
         if(!$product) {
@@ -40,29 +49,57 @@ class CoursesController extends Controller
                     $id => [
                         "name" => $product->course_name,
                         "credit" => $product->credits,
+                        "semester"=>$product->semester,
+                        "university"=>$product->university,
+                        "code"=>$product->code,
+                        
+
                     ]
             ];
  
             session()->put('cart', $cart);
  
-            return redirect()->back()->with('success', 'Product added to cart successfully!');
+            return redirect()->back()->with('success', 'Course added to cart successfully!');
         }
  
         // if cart not empty then check if this product exist then increment quantity
         if(isset($cart[$id])) {
-            return redirect()->back()->with('success', 'Product added to cart successfully!');
+            return redirect()->back()->with('success', 'Course added to cart successfully!');
         }
  
         // if item not exist in cart then add to cart with quantity = 1
         $cart[$id] = [
             "name" => $product->course_name,
             "credit" => $product->credits,
+            "semester"=>$product->semester,
+            "university"=>$product->university,
+            "code"=>$product->code,
         ];
  
         session()->put('cart', $cart);
  
-        return redirect()->back()->with('success', 'Product added to cart successfully!');
+        return redirect()->back()->with('success', 'Course added to cart successfully!');
     }
+    else{
+        return redirect()->route('login');
+    }
+}
+public function remove(Request $request)
+{
+    if($request->id) {
+
+        $cart = session()->get('cart');
+
+        if(isset($cart[$request->id])) {
+
+            unset($cart[$request->id]);
+
+            session()->put('cart', $cart);
+        }
+
+        session()->flash('success', 'Product removed successfully');
+    }
+}
 
     /**
      * Show the form for creating a new resource.

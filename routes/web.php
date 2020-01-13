@@ -23,4 +23,5 @@ Route::get('add-to-cart/{id}', 'CoursesController@addToCart');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
+Route::get('createWord', ['as'=>'createWord','uses'=>'WordDownload@createWord']);
+Route::delete('remove-from-cart', 'CoursesController@remove');

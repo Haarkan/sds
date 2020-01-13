@@ -8,18 +8,16 @@
                     <h2>Recent Work</h2>
                 </div>
                 @foreach($courses as $courses )
-                    <div class="well">
+                    <div class="well" id="well">
                             <h2>{{$courses->course_name}}</h2>
                             <h3>{{$courses->university}}</h3>
-                            <h4>Lorem ipsum dolor sit amet</h4><a class="btn btn-outline-primary btn-sm" role="button" href="{{ url('add-to-cart/'.$courses->id) }}">See More</a>
-                            </div>
+                            <h4>Credit :{{$courses->credits}}</h4><a class="btn btn-outline-primary btn-sm" role="button" href="{{ url('add-to-cart/'.$courses->id) }}">Add To Cart</a>
+
+                        </div>
+                        <div id="alma">{{$courses->details}}</div>
+
                     @endforeach
                 </div>
         </section>
     </main>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="#">Projects</a></div>
-        </div>
-    </footer>
 @endsection

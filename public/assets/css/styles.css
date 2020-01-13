@@ -133,3 +133,9 @@
     table#cart tfoot td .btn{display:block;}
  
 }
+#well:hover + #alma, #alma:hover {
+    display: block;
+  }
+  #alma {
+    display: none;
+  }
