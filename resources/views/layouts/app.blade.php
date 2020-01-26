@@ -82,7 +82,7 @@
      <div class="col-lg-12 col-sm-12 col-12 main-section">
          <div class="dropdown">
              <button type="button" onclick="window.location.href = 'cart';" value="w3docs" class="btn btn-info" data-toggle="dropdown" href="#"><a href="/erasmus/sds/public"></a>
-                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span>
+                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> Session <span class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span>
              </button>
          </div>
      </div>
