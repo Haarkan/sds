@@ -26,6 +26,7 @@ PhpWord framework for the downloading courses as Word.
 
 Windows Installation Guide:
 - Installing Xampp
+- Download php Version 7.3.2
 - Unzipping the repository in your localhost    
 - Installing Composer:
     php composer-setup.php --install-dir=bin --filename=composer
