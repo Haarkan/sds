@@ -17,11 +17,11 @@ https://chat.whatsapp.com/E09x2E8d0t0ATYbDDzOX0j
 
 The Project is using:
 
-Laravel Framework 6.9.0
-Server type: MariaDB
-PHP version: 7.3.2
-Bootstrap
-PhpWord framework for the downloading courses as Word.
+- Laravel Framework 6.9.0
+- Server type: MariaDB
+- PHP version: 7.3.2
+- Bootstrap
+- PhpWord framework for the downloading courses as Word.
 
 
 Windows Installation Guide:
