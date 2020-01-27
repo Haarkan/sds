@@ -25,12 +25,12 @@ PhpWord framework for the downloading courses as Word.
 
 
 Windows Installation Guide:
-1-Installing Xampp
-2-Unzipping the repository in your localhost    
-3- Installing Composer
+-Installing Xampp
+-Unzipping the repository in your localhost    
+- Installing Composer
     php composer-setup.php --install-dir=bin --filename=composer
-4-Installing Laravel
+-Installing Laravel
     composer global require laravel/installer
-5-Installing phpWord framework
+-Installing phpWord framework
     composer require phpoffice/phpword #https://github.com/PHPOffice/PHPWord
-6-Editting the databes from the server.
+-Editting the databes from the server.
